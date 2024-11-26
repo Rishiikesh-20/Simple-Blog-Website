@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+  <link rel="stylesheet" href="./styles/login.css"> 
+</head>
+<body>
+  <h1 class="lo">Login Page</h1>
+  <div class="loginDiv">
+    <form action="/login" method="POST" enctype="multipart/form-data">
+      <div class="formGroup">
+        <label for="textInput">Enter your name:</label>
+        <input type="text" id="textInput" name="text" class="textDiv" required>
+      </div>
+      
+      <div class="formGroup">
+        <label for="imageInput">Upload Image:</label>
+        <input id="imageInput" type="file" name="image" accept="image/*" required>
+      </div>
+      
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+</body>
+</html>

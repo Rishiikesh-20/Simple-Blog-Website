@@ -1,0 +1,64 @@
+<%- include('partials/header.ejs') %>  
+<% if (locals.arr.length === 0) { %>   
+  <div class="No_blogs">     
+    <h1>No Blogs Yet</h1>   
+  </div> 
+<% } else { %>   
+  <% locals.arr.forEach(element => { %>     
+    <div class="post" id="<%=element.id%>" >       
+      <div class="topRow">         
+        <div class="nameDiv">           
+          <img src="<%=locals.image%>" class="userImg">           
+          <div>             
+            <p class="userName"><%= element.user %></p>           
+          </div>                    
+        </div>         
+        <div>           
+          id: <%=element.id+1%>         
+        </div>         
+        <div class="threeDots">           
+          <div class="three">
+            <i class="bi bi-three-dots-vertical"></i>
+          </div>                      
+          <div class="edit_delete">             
+            <form action="/edit" method="POST">               
+              <input type="hidden" name="id" value="<%=element.id%>">               
+              <button type="submit" class="edit">Edit</button>             
+            </form>              
+            <form action="/delete" method="POST">               
+              <input type="hidden" name="id" value="<%=element.id%>">               
+              <button type="submit" class="delete">delete</button>             
+            </form>                        
+          </div>         
+        </div>                
+      </div>        
+      <div class="content">         
+        <div class="content-inside"><%= element.sentence %></div>       
+      </div>       
+      <div class="bottomRow">         
+        <h2 style="display:inline-block;margin:0px;" class="time">Time:</h2> 
+        <h3 style="display:inline-block;margin:0px;"><%= element.time %></h3>         
+        <%if(element.edited==true){%>         
+          <div class="edited">           
+            Edited         
+          </div>         
+        <%}%>       
+      </div>     
+    </div>   
+  <% }); %> 
+<% } %>  
+
+<div class="createSymbol" onclick="">   
+  <i class="symbol bi bi-pen-fill"></i>   
+  <div class="textBox">Create a blog</div> 
+</div>    
+
+<script>   
+  document.querySelector('.createSymbol').addEventListener('click', function() {     
+    window.location.href = '/create';   
+  });
+</script>  
+
+<script src="index.js"></script>  
+</body> 
+</html>

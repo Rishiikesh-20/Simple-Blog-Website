@@ -1,0 +1,167 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.headDiv {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #fff;
+  z-index: 1000;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.userImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+.userName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.appTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.endHead {
+  display: flex;
+  gap: 20px;
+}
+
+.endHead i {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.post {
+  width: 80%;
+  max-width: 600px;
+  margin: 120px auto 20px;
+  border-radius: 12px;
+  background-color: #1da1f2;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.topRow, .bottomRow {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nameDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.threeDots{
+  margin-right:20px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.threeDots:hover .edit_delete{
+    display:block;
+}
+.edit_delete{
+  position:relative;
+  bottom:-40px;
+  right:-7px;
+  display:none
+}
+.edit_delete div{
+  background: none;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  
+}
+
+.content-inside {
+  padding: 20px;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #333;
+}
+
+.time {
+  color: #333;
+  font-weight: 600;
+}
+
+
+.No_blogs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+
+.createSymbol {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #1da1f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.createSymbol:hover {
+  opacity: 0.8;
+}
+
+.textBox {
+  display: none;
+  position: absolute;
+  right: 80px;
+  bottom: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.createSymbol:hover .textBox {
+  display: block;
+}

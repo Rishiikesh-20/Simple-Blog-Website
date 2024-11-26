@@ -1,0 +1,13 @@
+<%-include('partials/header.ejs')%>
+<div class="createPost">
+  <form action="/create" method="post">
+    <label for="createContent" style="color:violet;font-weight: 600;">Create a blog : </label>
+    <br>
+    <br>
+    <textarea id="createContent" name="contentBox" rows="4" cols="50">
+    </textarea>
+    <br>
+    <br>
+    <input type="submit" class="submitButton">
+  </form>
+</div>
